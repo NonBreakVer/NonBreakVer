@@ -6,7 +6,7 @@
 
 1. **`MILESTONE (X.0.0)`:** Incremented for **major milestones**, system-wide architectural rewrites, scope expansions, or significant evolution of the project.
 2. **`MINOR (0.Y.0)`:** Incremented for **new backward-compatible features**, new functionality, content, or non-disruptive enhancements.
-3. **`PATCH (0.0.Z)`:** Incremented for **fixes or corrections**, documentation updates, and maintenance.
+3. **`PATCH (0.0.Z)`:** Incremented for **fixes, corrections**, documentation updates, or routine maintenance. May be omitted when equal to zero (e.g., `1.2` instead of `1.2.0`).
 
 ## NonBreakVer
 
@@ -26,7 +26,7 @@ This distinction doesn't communicate well when a project reaches a new milestone
 
 Ultimately, most alternative versioning schemes that attempt to solve this end up forcing backward-compatible projects to carry an artificial **`MAJOR`** digit solely to comply with a breaking-change requirement they will never trigger.
 
-## Filling the Gap
+## Bridging the Gap
 
 **NonBreakVer** exchanges **`MAJOR`** in favor of **`MILESTONE`**, while retaining standard **SemVer** mechanics for the lower digits **`MINOR`** and **`PATCH`**.
 
