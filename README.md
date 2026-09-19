@@ -18,34 +18,15 @@ Rather than inventing a new convention for its own sake, this is simply the form
 
 Most people perceive a new major version of anything — a product, an app, or a game — as something that should bring big changes, new content, or a significant evolution, but that's not how the **[Semantic Versioning](https://semver.org/)** standard works — because that's not what it was trying to communicate or solve.
 
-### Semantic Versioning
+### SemVer
 
-For **Semantic Versioning**, it's only a new major version when there are breaking changes. So it can be a design overhaul, a complete rewrite of a code base or a lot of new improvements and features and it will still be considered a **minor change** if no compatibility was broken in the updated version.
+For **Semantic Versioning**, it's only a **new major version** when there are breaking changes. A complete code base rewrite, a design overhaul, or a massive set of improvements will still be classified as a **minor update** if no compatibility is broken.
 
-This distinction doesn't communicate well when a project reaches a new milestone, be it for marketing reasons or for our own understanding of something that deserves more attention. This restriction is one of the main reasons many people and companies choose to introduce their own versioning schemes.
+This distinction doesn't communicate well when a project reaches a new milestone, be it for marketing reasons or for our own understanding of something that deserves more attention. Consequently, many maintainers choose to define their own versioning systems.
 
-The downside of this is that either the user has to try to understand it by context, or you have to make it explicit how your versioning works — without being able to simply reference the spec you follow.
+Ultimately, most alternative versioning schemes that attempt to solve this end up forcing backward-compatible projects to carry an artificial **`MAJOR`** digit solely to comply with a breaking-change requirement they will never trigger.
 
-### Other Versioning Specs
-
-**[Romantic Versioning](https://github.com/romversioning/romver)** and **[Pragmatic Versioning](https://github.com/pragver/pragver)** also try to address this confusion. Despite the different naming convention — **`PROJECT`** for **RomVer** and **`GRADE`** for **PragVer** —, the bottom line is that a new major version means that the project or product has achieved a new milestone.
-
-#### Romantic Versioning
-
-**RomVer** tries to focus more on the user — that usually doesn't care or understand what is considered **`MINOR`** or **`PATCH`** —, so it combines both into a single number at the end. It follows this format **1.0.0 (`PROJECT.MAJOR.MINOR/PATCH`):**
-
-- **`MAJOR`:** Breaking changes
-- **`MINOR/PATCH`**: Non-breaking changes
-
-This might be good for the user, but you lose the granularity of easily distinguishing new features from fixes and corrections.
-
-#### Pragmatic Versioning
-
-**PragVer** tackles it in a different way, it basically adds **`GRADE`** in front of Semantic Versioning so it's easy to understand when there is a new disruptive version, it has 4 numbers following the **1.0.0.0 (`GRADE.MAJOR.MINOR.PATCH`)** format.
-
-This solves the confusion and it keeps the convention that **SemVer** already established. But now there is an extra number, and ultimately, both **RomVer** and **PragVer** end up forcing projects without breaking changes to maintain an unnecessary **`0`** in the middle of their versioning scheme just to comply with a breaking-change digit they will never use.
-
-## The Solution
+## Filling the Gap
 
 **NonBreakVer** exchanges **`MAJOR`** in favor of **`MILESTONE`**, while retaining standard **SemVer** mechanics for the lower digits **`MINOR`** and **`PATCH`**.
 
