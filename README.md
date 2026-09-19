@@ -6,7 +6,7 @@
 
 1. **`MILESTONE (X.0.0)`:** Incremented for **major milestones**, system-wide architectural rewrites, scope expansions, or significant evolution of the project.
 2. **`MINOR (0.Y.0)`:** Incremented for **new backward-compatible features**, new functionality, content, or non-disruptive enhancements.
-3. **`PATCH (0.0.Z)`:** Incremented for **fixes, corrections**, documentation updates, or routine maintenance. May be omitted when equal to zero (e.g., `1.2` instead of `1.2.0`).
+3. **`PATCH (0.0.Z)`:** Incremented for **fixes, corrections**, documentation updates, or routine maintenance. May be omitted when equal to zero (e.g., **`1.2`** instead of **`1.2.0`**).
 
 ## NonBreakVer
 
