@@ -57,7 +57,7 @@ This solves the confusion and it keeps the convention that **SemVer** already es
 
 ## Non-Breaking Versioning Specification
 
-**1.** Version numbers take the form **`MILESTONE.MINOR.PATCH[-PRE][+BUILD]`**, where **`MILESTONE`**, **`MINOR`**, and **`PATCH`** are non-negative integers with no leading zeroes, and **`PRE`** and **`BUILD`** are optional identifiers made up of ASCII alphanumerics, hyphens, and dots.
+**1.** Version numbers take the form **`MILESTONE.MINOR.PATCH[-PRE][+BUILD]`**, where **`MILESTONE`**, **`MINOR`**, and when **`PATCH`** is **`0`**, it may optionally be omitted from the written version. **`PATCH`** are non-negative integers with no leading zeroes, and **`PRE`** and **`BUILD`** are optional identifiers made up of ASCII alphanumerics, hyphens, and dots.
 
 **2.** This scheme is meant for projects that commit to never introducing breaking changes — either because the project has no public API to break, or because the maintainer treats backward compatibility as a strict, self-imposed rule even when breaking changes would technically be possible.
 
@@ -81,7 +81,7 @@ This solves the confusion and it keeps the convention that **SemVer** already es
 
 > Examples: `1.0.0-alpha+001`, `1.0.0+20260313144700`, `1.0.0-beta+exp.sha.5114f85`.
 
-**11.** To compare versions, check **`MILESTONE`** first — if they differ, that decides it. If not, check **`MINOR`**, then **`PATCH`**. If all three match, a pre-release version always ranks lower than the equivalent normal release.
+**11.** To compare versions, check **`MILESTONE`** first — if they differ, that decides it. If not, check **`MINOR`**, then **`PATCH`**. When comparing precedence, an omitted **`PATCH`** is treated as **`0`**. If all three match, a pre-release version always ranks lower than the equivalent normal release.
 
 > Example: `1.0.0 < 2.0.0 < 2.1.0 < 2.1.1 < 2.1.2-rc.1 < 2.1.2-rc.2 < 2.1.2`.
 
