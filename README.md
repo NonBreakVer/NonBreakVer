@@ -34,7 +34,7 @@ Ultimately, most alternative versioning schemes that attempt to solve this end u
 
 - **Backward Compatibility:** Updating a **NonBreakVer** project must never intentionally break user configurations, supported environments, or any previously supported functionality — regardless of which segment of the version number changes.
 - **Additive Mechanics:** Features and properties are added, refined, or sanitized. Deprecations must be handled gracefully without dropping support abruptly.
-- **Intuitive Versioning:** The **`MILESTONE`** number communicates a version progression that people intuitively understand, while **`MINOR`** and **`PATCH`** maintain precision for tooling and tracking at a glance.
+- **Intuitive Versioning:** The **`MILESTONE`** number communicates a version progression that people intuitively understand, while **`MINOR`** and **`PATCH`** maintain the granularity of easily distinguishing new features from corrections.
 
 ## Non-Breaking Versioning Specification
 
