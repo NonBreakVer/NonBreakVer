@@ -38,7 +38,7 @@ Ultimately, most alternative versioning schemes that attempt to solve this end u
 
 ## Non-Breaking Versioning Specification
 
-**1.** Version numbers take the form **`MILESTONE.MINOR.PATCH[-PRE][+BUILD]`**, where **`MILESTONE`**, **`MINOR`** and **`PATCH`** are non-negative integers with no leading zeroes — and when **`PATCH`** is **`0`**, it may optionally be omitted from the written version. **`PRE`** and **`BUILD`** are optional identifiers made up of ASCII alphanumerics, hyphens, and dots.
+**1.** Version numbers take the form **`MILESTONE.MINOR(.PATCH)[-PRE][+BUILD]`**, where **`MILESTONE`**, **`MINOR`** and **`PATCH`** are non-negative integers with no leading zeroes — and when **`PATCH`** is **`0`**, it may optionally be omitted from the written version. **`PRE`** and **`BUILD`** are optional identifiers made up of ASCII alphanumerics, hyphens, and dots.
 
 **2.** This scheme is meant for projects that commit to never introducing breaking changes — either because the project has no public API to break, or because the maintainer treats backward compatibility as a strict, self-imposed rule even when breaking changes would technically be possible.
 
