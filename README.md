@@ -43,7 +43,7 @@ This might be good for the user, but you lose the granularity of easily distingu
 
 **PragVer** tackles it in a different way, it basically adds **`GRADE`** in front of Semantic Versioning so it's easy to understand when there is a new disruptive version, it has 4 numbers following the **1.0.0.0 (`GRADE.MAJOR.MINOR.PATCH`)** format.
 
-This solves the confusion and it keeps the convention that **SemVer** already established. But now there is an extra number, and projects that don't have breaking changes have to carry an unnecessary **`0`** in the middle of the version.
+This solves the confusion and it keeps the convention that **SemVer** already established. But now there is an extra number, and ultimately, both **RomVer** and **PragVer** end up forcing projects without breaking changes to maintain an unnecessary **`0`** in the middle of their versioning scheme just to comply with a breaking-change digit they will never use.
 
 ## The Solution
 
