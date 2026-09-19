@@ -75,15 +75,15 @@ This solves the confusion and it keeps the convention that **SemVer** already es
 
 **9.** A pre-release version can be marked by appending a hyphen and a dot-separated identifier right after **`PATCH`**, made only of alphanumerics, dots, and hyphens. Pre-release identifiers can't be empty, and are only meant for unstable previews of a future release.
 
-Examples: **`1.0.0-alpha`**, **`1.0.0-alpha.1`**, **`1.0.0-0.3.7`**.
+> Examples: `1.0.0-alpha`, `1.0.0-alpha.1`, `1.0.0-0.3.7`.
 
 **10.** Build metadata can be added by appending a plus sign and a dot-separated identifier right after the pre-release identifier (or **`PATCH`**, if there's no pre-release tag). Same character rules apply, and it's only for identifying a specific build of a release, not the release itself.
 
-Examples: **`1.0.0-alpha+001`**, **`1.0.0+20260918`**, **`1.0.0-beta+exp.sha.5114f85`**.
+> Examples: `1.0.0-alpha+001`, `1.0.0+20260918`, `1.0.0-beta+exp.sha.5114f85`.
 
 **11.** To compare versions, check **`MILESTONE`** first — if they differ, that decides it. If not, check **`MINOR`**, then **`PATCH`**. If all three match, a pre-release version always ranks lower than the equivalent normal release.
 
-Example: **`1.0.0 < 2.0.0 < 2.1.0 < 2.1.1 < 2.1.2-rc.1 < 2.1.2-rc2 < 2.1.2`**.
+> Example: `1.0.0 < 2.0.0 < 2.1.0 < 2.1.1 < 2.1.2-rc.1 < 2.1.2-rc2 < 2.1.2`.
 
 ## Non-Breaking Changes Project Types
 
